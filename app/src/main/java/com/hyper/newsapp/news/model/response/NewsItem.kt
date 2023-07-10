@@ -1,6 +1,11 @@
 package com.hyper.newsapp.news.model.response
 
-data class Data(
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "news")
+data class NewsItem(
+    @PrimaryKey(autoGenerate = true) val id: Int?,
     val author: String,
     val category: String,
     val country: String,

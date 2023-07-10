@@ -1,13 +1,11 @@
 package com.hyper.newsapp.news.di
 
-import android.content.Context
 import com.hyper.newsapp.BuildConfig
-import com.hyper.newsapp.news.model.repo.NewsApi
+import com.hyper.newsapp.news.model.remote.NewsApi
 import com.hyper.newsapp.utils.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -22,7 +20,7 @@ import java.util.concurrent.TimeUnit
 object NewsNetworkModule {
 
     @Provides
-    fun getRetrofitInstance(@ApplicationContext context: Context): NewsApi {
+    fun getRetrofitInstance(): NewsApi {
 
         var client = OkHttpClient.Builder()
 

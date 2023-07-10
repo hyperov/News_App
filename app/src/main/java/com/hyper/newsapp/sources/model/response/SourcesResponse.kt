@@ -1,7 +1,9 @@
 package com.hyper.newsapp.sources.model.response
 
+import com.google.gson.annotations.SerializedName
 import com.hyper.newsapp.common.ParentResponse
 
 data class SourcesResponse(
-    val data: List<Data>
+    @field:SerializedName("data")
+    val news: List<SourceItem>
 ) : ParentResponse()
