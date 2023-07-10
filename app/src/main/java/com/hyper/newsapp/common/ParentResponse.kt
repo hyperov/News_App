@@ -1,6 +1,4 @@
-package com.hyper.newsapp.utils
-
-import com.hyper.newsapp.news.model.response.Error
+package com.hyper.newsapp.common
 
 open class ParentResponse {
     val error: Error? = null

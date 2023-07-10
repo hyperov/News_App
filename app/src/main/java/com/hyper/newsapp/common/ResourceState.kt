@@ -1,4 +1,4 @@
-package com.hyper.newsapp.utils
+package com.hyper.newsapp.common
 
 sealed interface ResourceState {
     object EMPTY : ResourceState

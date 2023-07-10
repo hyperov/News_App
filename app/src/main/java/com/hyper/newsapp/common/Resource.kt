@@ -1,6 +1,6 @@
-package com.hyper.newsapp.utils
+package com.hyper.newsapp.common
 
-sealed class Resource<T>(
+sealed class Resource<out T>(
     val state: ResourceState,
     val data: T? = null,
     val message: String? = null
